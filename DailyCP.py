@@ -199,10 +199,11 @@ class DailyCP:
 
     def getCollectorFormFiled(self, formWid, collectorWid):
         body = {
-            "pageSize": 50,
+            "pageSize": 9999,
             "pageNumber": 1,
             "formWid": formWid,
             "collectorWid": collectorWid
+            "instanceWid":1383
         }
         return self.request("https://{host}/wec-counselor-collector-apps/stu/collector/getFormFields", body)["datas"]["rows"]
 
