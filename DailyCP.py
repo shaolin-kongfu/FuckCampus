@@ -195,6 +195,8 @@ class DailyCP:
         body = {
             "collectorWid": collectorWid
         }
+        detail=self.request("https://{host}/wec-counselor-collector-apps/stu/collector/detailCollector", body)["datas"]
+        print(detail)
         return self.request("https://{host}/wec-counselor-collector-apps/stu/collector/detailCollector", body)["datas"]
 
     def getCollectorFormFiled(self, formWid, collectorWid):
