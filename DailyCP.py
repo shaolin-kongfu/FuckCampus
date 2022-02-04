@@ -193,7 +193,8 @@ class DailyCP:
 
     def getCollectorDetail(self, collectorWid):
         body = {
-            "collectorWid": collectorWid
+            "collectorWid": collectorWid,
+            "instanceWid":1383
         }
         detail=self.request("https://{host}/wec-counselor-collector-apps/stu/collector/detailCollector", body)["datas"]
         print(detail)
